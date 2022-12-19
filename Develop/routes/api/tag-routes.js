@@ -61,9 +61,9 @@ router.put('/:id', async(req, res) => {
       res.status(404).json({ message: 'No category found with this id!' });
       return;
     }
+    
     res.status(200).json(tagData);
-
-  } catch(err){
+  } catch (err) {
     res.status(500).json(err);
   }
 });
@@ -72,7 +72,7 @@ router.put('/:id', async(req, res) => {
 router.delete('/:id', async(req, res) => {
   // delete on tag by its `id` value
   try{
-    const tagData = await Tag.destroy(req.body , {
+    const tagData = await Tag.destroy({
       where: { id: req.params.id }
     });
 
@@ -81,8 +81,7 @@ router.delete('/:id', async(req, res) => {
       return;
     }
     res.status(200).json(tagData);
-
-  } catch(err){
+  } catch (err) {
     res.status(500).json(err);
   }
 });

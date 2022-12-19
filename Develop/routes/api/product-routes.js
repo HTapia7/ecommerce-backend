@@ -16,10 +16,11 @@ router.get('/', async (req, res) => {
         { model: Tag, through: ProductTag,
         attributes: ['tag_name'],
         }],
-      
         });
-      }catch(err){
-    res.status(500).json(err);
+
+        res.status(200).json(productData)
+      } catch (err){
+        res.status(500).json(err);
   }
 });
 
@@ -37,10 +38,11 @@ router.get('/:id', async (req, res) => {
         attributes: ['tag_name'],
         }],
         });
-      }catch(err){
+
+        res.status(200).json(productData)
+      } catch (err){
     res.status(500).json(err);
   }
-
 });
 
 // create new product
@@ -54,6 +56,7 @@ router.post('/', (req, res) => {
     }
   */
   Product.create(req.body)
+
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
@@ -126,8 +129,11 @@ router.delete('/:id',async (req, res) => {
 
     if(!productData){
       res.status(404).json({ message: 'not valid Id'});
+      return;
     }
-  }catch(err){
+
+    res.status(200).json(productData)
+  } catch (err){
     res.status(500).json(err);
   }
 });
