@@ -6,6 +6,8 @@
 
 <img width="1512" alt="Screenshot 2022-12-19 at 2 37 21 PM" src="https://user-images.githubusercontent.com/112591915/208550116-cc4b477e-a3f0-441b-b1c0-aa3e44454d28.png">
 
+https://drive.google.com/file/d/1zi07wc06GQKxhs5HnfTPgG663d36wUZl/view
+
 ## User Story 
 
 * WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
