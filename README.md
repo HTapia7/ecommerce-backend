@@ -27,4 +27,4 @@ THEN I am able to connect to a database using Sequelize
   - Start up database by running 'mysql -u root' in terminal followed by 'source schema.db'
   - Run the seed file 'npm run seed'
   - run the server.js file by using node
-  - Use insomnia to 
+  - Use insomnia to navigate to specific routes
