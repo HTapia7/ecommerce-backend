@@ -21,6 +21,14 @@ THEN I am able to connect to a database using Sequelize
 
 * WHEN I test API POST, PUT, and DELETE routes in Insomnia Core THEN I am able to successfully create, update, and delete data in my database
 
+## Technologies 
+* dotenv
+* Express
+* JavaScript
+* mysql2
+* sequelize
+* node
+
 ## Installation
 
   - Install dependencies on terminal by using command 'npm install' 
